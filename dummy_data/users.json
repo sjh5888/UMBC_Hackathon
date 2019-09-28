@@ -1,0 +1,20 @@
+[
+  {
+    "userId": Object(123),
+    "username": "John",
+    "lastname": "Smith",
+    "profile": "URL",
+    "email": "jsmith@example.com",
+    "password": hash("password")
+    "skills": [
+      "C",
+      "Python",
+      "React"
+    ],
+    "interests": [
+      "Hiking",
+      "Coding",
+      "Rafting"
+    ]
+  }
+]
