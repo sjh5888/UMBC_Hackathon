@@ -1,7 +1,16 @@
 [
   {
+    "projectId": Id(666),
     "image": "URL",
+    "title": "Proj Title"
     "description": "Here is my project",
-    "skills": 
+    "skills": [
+      "C",
+      "Java"
+    ],
+    "subscriptions": [
+      UserId(123),
+      ...
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 [
   {
-    "userId": Object(123),
+    "userId": Id(123),
     "username": "John",
     "lastname": "Smith",
     "profile": "URL",
@@ -15,6 +15,14 @@
       "Hiking",
       "Coding",
       "Rafting"
+    ],
+    "projects": [
+      ProjectId(567),
+      ...
+    ],
+    "hackathons": [
+      HackathonId(345),
+      ...
     ]
   }
 ]
