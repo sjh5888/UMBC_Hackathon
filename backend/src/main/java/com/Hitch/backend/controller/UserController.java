@@ -3,33 +3,46 @@ package com.Hitch.backend.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Hitch.backend.model.User;
-import com.Hitch.backend.repository.Repository;
+import com.Hitch.backend.repository.RepositoryUser;
 
 @RestController
 @RequestMapping("/api")
-public class UserController implements Repository{
+public class UserController implements RepositoryUser{
 
 	@Autowired
-	private Repository repository;
-	//private User user1;
+	private RepositoryUser repository;
 	
 	@PostMapping("/User")
 	public User createUser(@RequestBody User users)
 	{
-		//repository.save(users);
+		repository.save(users);
 		return users;
+	}
+	
+	@GetMapping("/User")
+	public List<User> GetUser()
+	{
+		return repository.findAll();
+	}
+	
+	@GetMapping("/User/{id}")
+	public Optional<User> GetSpecigicUser(@PathVariable("id") String id) {
+		return repository.findById(id);
 	}
 
 	@Override
