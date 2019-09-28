@@ -19,8 +19,6 @@ class Project extends React.Component {
 
   componentDidMount() {
     const { handle } = this.props.match.params;
-
-    this 
   }
 }
 
