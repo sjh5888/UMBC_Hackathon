@@ -12,7 +12,7 @@ function Routes() {
   return (
     <div className="routes">
     <Switch>
-      <Route exact path={`/user`} component={User} />
+      <Route exact path={`/user/:handle`} component={User} />
       <Route exact path={`/projects`} component={Project} />
       <Route exact path={`/hackathon`} component={Hackathon} />
       <Route exact path={`/`} component={Home} />
