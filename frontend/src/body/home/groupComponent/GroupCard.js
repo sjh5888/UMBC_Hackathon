@@ -16,7 +16,7 @@ class Project extends React.Component{
   handleClick() {
     this.setState(prevState => ({
       isSubscribed: !prevState.isSubscribed
-    
+
     }));
     console.log(" Subscribe clicked")
   }
@@ -39,4 +39,4 @@ class Project extends React.Component{
   }
 }
 
-export default GroupCard
+export default Project

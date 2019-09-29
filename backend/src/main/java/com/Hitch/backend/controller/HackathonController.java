@@ -24,7 +24,7 @@ import com.Hitch.backend.repository.RepositoryHackathon;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin()
 public class HackathonController implements RepositoryHackathon{
 
 	@Autowired

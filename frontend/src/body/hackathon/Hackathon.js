@@ -19,15 +19,8 @@ class Hackathon extends React.Component {
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
-        data.map(h => {
-          console.log(h.id);
-          console.log(handle);
-          if(h.id === handle) {
-           // console.log("hey")
-            this.setState({
-              hackathon: h
-            })
-          }
+        this.setState({
+          hackathon: data
         });
       });
   }

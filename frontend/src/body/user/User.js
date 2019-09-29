@@ -19,7 +19,10 @@ class User extends React.Component {
     fetch('http://localhost:8080/api/User/' + handle)
       .then(resp => resp.json())
       .then(data => {
-        console.log(data);
+        console.log(data)
+        this.setState({
+          user: data
+        });
       });
   }
 

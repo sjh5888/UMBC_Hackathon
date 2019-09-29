@@ -23,7 +23,7 @@ import com.Hitch.backend.repository.RepositoryProjects;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin()
 public class ProjectController implements RepositoryProjects {
 
 	@Autowired
@@ -52,7 +52,7 @@ public class ProjectController implements RepositoryProjects {
 	{
 		Optional<Projects> project = repository.findById(id);
 	}
-	
+
 	@Override
 	public <S extends Projects> List<S> saveAll(Iterable<S> entities) {
 		// TODO Auto-generated method stub
