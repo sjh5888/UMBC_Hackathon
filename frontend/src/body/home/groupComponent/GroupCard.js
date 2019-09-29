@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-class ProjectCard extends React.Component{
+class GroupCard extends React.Component{
   constructor(props){
     super(props)
     this.handleClick = this.handleClick.bind(this)
@@ -90,4 +90,4 @@ class ProjectCard extends React.Component{
   }
 }
 
-export default ProjectCard
+export default GroupCard

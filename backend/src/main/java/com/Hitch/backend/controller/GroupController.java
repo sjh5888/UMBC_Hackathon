@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Hitch.backend.model.Group;
+import com.Hitch.backend.model.PutObject;
 
 import com.Hitch.backend.repository.RepositoryGroup;
 
@@ -49,13 +50,16 @@ public class GroupController implements RepositoryGroup{
 	}
 
 	@PutMapping("/Group/update/{id}")
-	public void AddSubscriber(@PathVariable("id") String id,@RequestBody String userId)
+	public void AddSubscriber(@PathVariable("id") String id,@RequestBody PutObject poj)
 	{
 		 Optional<Group>  groups = repository.findById(id);
 		 Group mine = groups.get();
 
-		 mine.addSub(userId);
-		 repository.save(mine);
+		if (poj.getSub())
+			mine.addSub(poj.getUserId());
+		else
+			mine.addTeam(poj.getUserId());
+		repository.save(mine);
 	}
 
 	@Override

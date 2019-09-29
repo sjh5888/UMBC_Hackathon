@@ -7,6 +7,8 @@ import {
 import Axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import GroupCard from '../home/groupComponent/GroupCard';
+
 class HackathonCard extends React.Component{
 
   constructor(props){
@@ -58,6 +60,11 @@ class HackathonCard extends React.Component{
             Create Project
           </Button>
         </div>
+        {this.state.hackathon.groups.map(group => {
+          return (
+            <GroupCard groupId={group} />
+          )
+        })}
       </div>
     )
   }

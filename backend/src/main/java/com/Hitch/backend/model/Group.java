@@ -71,5 +71,9 @@ public class Group{
 		subscriptions.add(id);
 	}
 
+	public void addTeam(String id)
+	{
+		team.add(id);
+	}
 
 }
