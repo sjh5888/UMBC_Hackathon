@@ -16,7 +16,7 @@ class ProjectCard extends React.Component{
   handleClick() {
     this.setState(prevState => ({
       isSubscribed: !prevState.isSubscribed
-    
+
     }));
     console.log(" Subscribe clicked")
   }
@@ -40,3 +40,4 @@ class ProjectCard extends React.Component{
 }
 
 export default ProjectCard
+

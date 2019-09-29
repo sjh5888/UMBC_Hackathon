@@ -7,33 +7,33 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("Groups")
 public class Group{
-	
+
 	@Id
-	String groupId;
-	
+	String id;
+
 	String hackathonId; // hackathonId
 	String projectId; // projecId
-	
+
 	String creator; // userId
-	
+
 	List<String> team; // userId
 	List<String> subscriptions; // userId
-	
-	public Group(String groupId, String hackathonId, String projectId, String creator, List<String> team,
+
+	public Group(String id, String hackathonId, String projectId, String creator, List<String> team,
 			List<String> subscriptions) {
 		super();
-		this.groupId = groupId;
+		this.id = id;
 		this.hackathonId = hackathonId;
 		this.projectId = projectId;
 		this.creator = creator;
 		this.team = team;
 		this.subscriptions = subscriptions;
 	}
-	public String getGroupId() {
-		return groupId;
+	public String getId() {
+		return id;
 	}
-	public void setGroupId(String groupId) {
-		this.groupId = groupId;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getHackathonId() {
 		return hackathonId;
@@ -65,11 +65,11 @@ public class Group{
 	public void setSubscriptions(List<String> subscriptions) {
 		this.subscriptions = subscriptions;
 	}
-	
+
 	public void addSub(String id)
 	{
 		subscriptions.add(id);
 	}
-	
+
 
 }

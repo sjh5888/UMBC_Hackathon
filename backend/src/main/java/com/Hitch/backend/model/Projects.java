@@ -7,26 +7,26 @@ import org.springframework.data.annotation.Id;
 public class Projects {
 
 	@Id
-	String projectId;
-	
+	String id;
+
 	String title;
 	String description;
 	ArrayList<String> desiredSkills;
-	
-	public Projects(String projectId, String title, String description, ArrayList<String> desiredSkills) {
+
+	public Projects(String id, String title, String description, ArrayList<String> desiredSkills) {
 		super();
-		this.projectId = projectId;
+		this.id = id;
 		this.title = title;
 		this.description = description;
 		this.desiredSkills = desiredSkills;
 	}
 
-	public String getProjectId() {
-		return projectId;
+	public String getId() {
+		return id;
 	}
 
-	public void setProjectId(String projectId) {
-		this.projectId = projectId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getTitle() {
@@ -52,9 +52,9 @@ public class Projects {
 	public void setDesiredSkills(ArrayList<String> desiredSkills) {
 		this.desiredSkills = desiredSkills;
 	}
-	
 
-	
 
-	
+
+
+
 }
