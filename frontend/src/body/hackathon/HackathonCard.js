@@ -6,7 +6,6 @@ import {
 } from 'react-bootstrap'
 import Axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './assets/style.css'
 
 class HackathonCard extends React.Component{
 
