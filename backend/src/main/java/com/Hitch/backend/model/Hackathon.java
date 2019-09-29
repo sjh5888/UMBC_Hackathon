@@ -10,31 +10,31 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Hackathon {
 
 	@Id
-	String hackathonId;
-	
+	String id;
+
 	String name;
 	String pictureURL;
 	String date;
-	
+
 	List<String> groups; // groupId
 
-	public Hackathon(String hackathonId, String name, String pictureURL, String date, List<String> groups) {
+	public Hackathon(String id, String name, String pictureURL, String date, List<String> groups) {
 		super();
-		this.hackathonId = hackathonId;
+		this.id = id;
 		this.name = name;
 		this.pictureURL = pictureURL;
 		this.date = date;
 		this.groups = groups;
 	}
 
-	public String getHackathonId() {
-		return hackathonId;
+	public String getId() {
+		return id;
 	}
 
-	public void setHackathonId(String hackathonId) {
-		this.hackathonId = hackathonId;
+	public void setId(String id) {
+		this.id = id;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -46,7 +46,7 @@ public class Hackathon {
 	public String getPictureURL() {
 		return pictureURL;
 	}
-	
+
 	public void setPictureURL(String pictureURL) {
 		this.pictureURL = pictureURL;
 	}
@@ -66,10 +66,10 @@ public class Hackathon {
 	public void setGroups(List<String> groups) {
 		this.groups = groups;
 	}
-	
+
 	public void addGroup(String id)
 	{
 		groups.add(id);
 	}
-	
+
 }

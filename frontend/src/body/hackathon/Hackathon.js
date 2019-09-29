@@ -15,7 +15,9 @@ class Hackathon extends React.Component {
 
     console.log(handle);
 
-    fetch('http://localhost:6969/hackathon')
+    console.log('http://localhost:8080/api/Hackathon/' + handle);
+
+    fetch('http://localhost:8080/api/Hackathon/' + handle)
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
