@@ -6,6 +6,7 @@ import Routes from './nav/Routes';
 import GroupCard from './body/home/groupComponent/GroupCard';
 import Hackathon from './body/hackathon/Hackathon';
 
+
 function App() {
   return (
     <div className="wrapper">
