@@ -1,0 +1,8 @@
+.profile-pic {
+  width: 125px !important;
+}
+
+.user-info {
+  /* display: flex; */
+  text-align: center;
+}
