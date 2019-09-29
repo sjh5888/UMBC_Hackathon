@@ -6,7 +6,7 @@ class NewProject extends React.Component{
     
     componentDidMount(){
 
-        var creatorId = 'e7292d5ba58672ce7f6fc3c0b646ab63' // TODO: dynamically drawn from authenticated user
+        var creatorId = '6ed61d4b80bb0f81937b32418e98adca' // TODO: dynamically drawn from authenticated user
         var projectId = ""
        
         axios.get('http://localhost:8080/api/Group/' + creatorId)

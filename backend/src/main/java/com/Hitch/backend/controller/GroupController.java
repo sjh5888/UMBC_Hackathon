@@ -50,8 +50,8 @@ public class GroupController implements RepositoryGroup{
 	}
 	
 	@GetMapping("/group/{creator}")
-	public Optional<Group> GetGroupCreator(@PathVariable("creator") String creator) {
-		return repository.findById(creator);
+	public Group GetGroupCreator(@PathVariable("creator") String creator) {
+		return repository.findByCreator(creator);
 	}
 	
 	@PutMapping("/Group/update/{id}")
@@ -191,6 +191,12 @@ public class GroupController implements RepositoryGroup{
 	public <S extends Group> boolean exists(Example<S> example) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public Group findByCreator(String creator) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
