@@ -1,0 +1,162 @@
+{
+  "user": [
+    {
+      "id": "6ed61d4b80bb0f81937b32418e98adca",
+      "fName": "Steven",
+      "lName": "Hansen",
+      "username": "stevo",
+      "password": "password",
+      "skills": [
+        "Java",
+        "Spring",
+        "React",
+        "Javascript"
+      ],
+      "instrests": [
+        "Guitar",
+        "Coding",
+        "Movies"
+      ],
+      "links": [
+        "https://github.com/sjh5888"
+      ],
+      "teams": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "subscriptions": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "hackathons": [
+        "98769d94f3bc210559c96e684fe815ff"
+      ]
+    },
+
+    {
+      "id": "da41bceff97b1cf96078ffb249b3d66e",
+      "fName": "Andy",
+      "lName": "Cruz",
+      "username": "andy-dany",
+      "password": "password",
+      "skills": [
+        "Python",
+        "React"
+      ],
+      "instrests": [
+        "Cooking",
+        "Coding",
+        "Movies"
+      ],
+      "links": [
+        "https://github.com/sjh5888"
+      ],
+      "teams": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "subscriptions": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "hackathons": [
+        "98769d94f3bc210559c96e684fe815ff"
+      ]
+    },
+
+    {
+      "id": "93bdb73b49e88b5ce23da0509da1b8ac",
+      "fName": "Emmanuel",
+      "lName": "Diaz",
+      "username": "ema",
+      "password": "password",
+      "skills": [
+        "Java",
+        "Spring"
+      ],
+      "instrests": [
+        "Gaming",
+        "Coding",
+        "Movies"
+      ],
+      "links": [
+        "https://github.com/sjh5888"
+      ],
+      "teams": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "subscriptions": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "hackathons": [
+        "98769d94f3bc210559c96e684fe815ff"
+      ]
+    },
+
+    {
+      "id": "35af5e85ffaa87ee99ccba513bfd3ed7",
+      "fName": "Quinnan",
+      "lName": "Gill",
+      "username": "ema",
+      "password": "password",
+      "skills": [
+        "Java",
+        "Spring"
+      ],
+      "instrests": [
+        "Gaming",
+        "Coding",
+        "Movies"
+      ],
+      "links": [
+        "https://github.com/sjh5888"
+      ],
+      "teams": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "subscriptions": [
+        "90099eff20b3b5b5ac415eb410d28f32"
+      ],
+      "hackathons": [
+        "98769d94f3bc210559c96e684fe815ff"
+      ]
+    }
+  ],
+
+
+  "project": [
+    {
+      "id": "cc5b8e3f1a9cd932c262a8e57c1afbe1",
+      "title": "Hitch Hacker",
+      "description": "Let's connect hackers for hackathons",
+      "desiredSkills": [
+        "Java",
+        "Spring",
+        "React",
+        "Python"
+      ]
+    }
+  ],
+
+
+  "hackathon": [{
+    "id" : "98769d94f3bc210559c96e684fe815ff",
+    "name" : "Hack UMBC",
+    "imageURL" : "https://s3.amazonaws.com/assets.mlh.io/events/logos/000/001/219/thumb/HackUMBC.Facebook.Logo_%281%29.jpg?1564062845",
+    "date" : "9/28/19",
+    "groups" : ["90099eff20b3b5b5ac415eb410d28f32"]
+  }],
+
+  "group": [{
+    "id" : "90099eff20b3b5b5ac415eb410d28f32",
+    "hackathonId" : "98769d94f3bc210559c96e684fe815ff",
+    "projectId" : "cc5b8e3f1a9cd932c262a8e57c1afbe1",
+    "creator" : "6ed61d4b80bb0f81937b32418e98adca",
+    "team" :
+    ["6ed61d4b80bb0f81937b32418e98adca",
+      "93bdb73b49e88b5ce23da0509da1b8ac",
+      "da41bceff97b1cf96078ffb249b3d66e",
+      "35af5e85ffaa87ee99ccba513bfd3ed7"],
+    "subscriptions" :
+    ["6ed61d4b80bb0f81937b32418e98adca",
+      "93bdb73b49e88b5ce23da0509da1b8ac",
+      "da41bceff97b1cf96078ffb249b3d66e",
+      "35af5e85ffaa87ee99ccba513bfd3ed7"]
+  }]
+}
