@@ -3,7 +3,7 @@ import {Card, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-class Project extends React.Component{
+class ProjectCard extends React.Component{
   constructor(props){
     super(props)
     this.handleClick = this.handleClick.bind(this)
@@ -39,4 +39,4 @@ class Project extends React.Component{
   }
 }
 
-export default GroupCard
+export default ProjectCard
