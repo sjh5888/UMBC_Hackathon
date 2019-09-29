@@ -23,25 +23,25 @@ import com.Hitch.backend.repository.RepositoryProjects;
 
 @RestController
 @RequestMapping("/api")
-//@CrossOrigin(origins="http://localhost:3000")
+@CrossOrigin(origins="http://localhost:3000")
 public class ProjectController implements RepositoryProjects {
 
 	@Autowired
 	private RepositoryProjects repository;
-	
+
 	@PostMapping("/Projects")
 	public Projects createProject(@RequestBody Projects Projects)
 	{
 		repository.save(Projects);
 		return Projects;
 	}
-	
+
 	@GetMapping("/Projects")
 	public List<Projects> GetProject()
 	{
 		return repository.findAll();
 	}
-	
+
 	@GetMapping("/Projects/{id}")
 	public Optional<Projects> GetSpecigicProject(@PathVariable("id") String id) {
 		return repository.findById(id);
@@ -134,25 +134,25 @@ public class ProjectController implements RepositoryProjects {
 	@Override
 	public void deleteById(String id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void delete(Projects entity) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll(Iterable<? extends Projects> entities) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

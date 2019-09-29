@@ -8,6 +8,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +24,7 @@ import com.Hitch.backend.repository.RepositoryGroup;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins="http://localhost:3000")
 public class GroupController implements RepositoryGroup{
 
 	@Autowired
@@ -34,24 +36,24 @@ public class GroupController implements RepositoryGroup{
 		repository.save(Groups);
 		return Groups;
 	}
-	
+
 	@GetMapping("/Group")
 	public List<Group> Getgroups()
 	{
 		return repository.findAll();
 	}
-	
+
 	@GetMapping("/Group/{id}")
 	public Optional<Group> GetSpecigicUser(@PathVariable("id") String id) {
 		return repository.findById(id);
 	}
-	
+
 	@PutMapping("/Group/update/{id}")
 	public void AddSubscriber(@PathVariable("id") String id,@RequestBody String userId)
 	{
 		 Optional<Group>  groups = repository.findById(id);
 		 Group mine = groups.get();
-		 
+
 		 mine.addSub(userId);
 		 repository.save(mine);
 	}
@@ -137,25 +139,25 @@ public class GroupController implements RepositoryGroup{
 	@Override
 	public void deleteById(String id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void delete(Group entity) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll(Iterable<? extends Group> entities) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

@@ -9,6 +9,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,24 +23,25 @@ import com.Hitch.backend.repository.RepositoryUser;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins="http://localhost:3000")
 public class UserController implements RepositoryUser{
 
 	@Autowired
 	private RepositoryUser repository;
-	
+
 	@PostMapping("/User")
 	public User createUser(@RequestBody User users)
 	{
 		repository.save(users);
 		return users;
 	}
-	
+
 	@GetMapping("/User")
 	public List<User> GetUser()
 	{
 		return repository.findAll();
 	}
-	
+
 	@GetMapping("/User/{id}")
 	public Optional<User> GetSpecigicUser(@PathVariable("id") String id) {
 		return repository.findById(id);
@@ -126,25 +128,25 @@ public class UserController implements RepositoryUser{
 	@Override
 	public void deleteById(String id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void delete(User entity) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll(Iterable<? extends User> entities) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -170,5 +172,5 @@ public class UserController implements RepositoryUser{
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
+
 }

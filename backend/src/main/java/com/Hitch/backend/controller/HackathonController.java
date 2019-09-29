@@ -8,6 +8,7 @@ import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,6 +24,7 @@ import com.Hitch.backend.repository.RepositoryHackathon;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins="http://localhost:3000")
 public class HackathonController implements RepositoryHackathon{
 
 	@Autowired
@@ -34,13 +36,13 @@ public class HackathonController implements RepositoryHackathon{
 		repository.save(Hackathons);
 		return Hackathons;
 	}
-	
+
 	@GetMapping("/Hackathon")
 	public List<Hackathon> GetUser()
 	{
 		return repository.findAll();
 	}
-	
+
 	@GetMapping("/Hackathon/{id}")
 	public Optional<Hackathon> GetSpecigicHackathon(@PathVariable("id") String id) {
 		return repository.findById(id);
@@ -51,11 +53,11 @@ public class HackathonController implements RepositoryHackathon{
 	{
 		 Optional<Hackathon> hackathon = repository.findById(id);
 		 Hackathon temp = hackathon.get();
-		 
+
 		 temp.addGroup(groupId);
 		 repository.save(temp);
 	}
-	
+
 	@Override
 	public <S extends Hackathon> List<S> saveAll(Iterable<S> entities) {
 		// TODO Auto-generated method stub
@@ -137,25 +139,25 @@ public class HackathonController implements RepositoryHackathon{
 	@Override
 	public void deleteById(String id) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void delete(Hackathon entity) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll(Iterable<? extends Hackathon> entities) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void deleteAll() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
