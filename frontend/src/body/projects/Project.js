@@ -15,7 +15,7 @@ class Group extends React.Component {
 
     console.log(handle);
 
-    fetch('http://localhost:8080/project')
+    fetch('http://localhost:8080/project/')
       .then(resp => resp.json())
       .then(data => {
         console.log(data);

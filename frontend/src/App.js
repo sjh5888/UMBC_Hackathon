@@ -16,11 +16,7 @@ function App() {
     <div className="wrapper">
       <Navigation />
       <Routes />
-<<<<<<< HEAD
 
-=======
-      <ViewProject />
->>>>>>> 95cc4cff118bd39fc1eeba4ddacaf55333973e5c
     </div>
   );
 }
