@@ -6,6 +6,7 @@ import Routes from './nav/Routes';
 import GroupCard from './body/projects/ProjectCard';
 import Hackathon from './body/hackathon/Hackathon';
 import NewProject from './body/projects/NewProject';
+import ViewProject from './body/projects/ViewProject'
 
 
 function App() {
@@ -15,7 +16,11 @@ function App() {
     <div className="wrapper">
       <Navigation />
       <Routes />
+<<<<<<< HEAD
 
+=======
+      <ViewProject />
+>>>>>>> 95cc4cff118bd39fc1eeba4ddacaf55333973e5c
     </div>
   );
 }
