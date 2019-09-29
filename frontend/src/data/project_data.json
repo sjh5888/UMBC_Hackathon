@@ -1,0 +1,13 @@
+[
+  {
+    "id": "cc5b8e3f1a9cd932c262a8e57c1afbe1",
+    "title": "Hitch Hacker",
+    "description": "Let's connect hackers for hackathons",
+    "desiredSkills": [
+      "Java",
+      "Spring",
+      "React",
+      "Python"
+    ]
+  }
+]

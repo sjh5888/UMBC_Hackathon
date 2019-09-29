@@ -8,7 +8,7 @@ public class User {
 
 	@Id
 	String id;
-	
+
 	String fName;
 	String lName;
 	String username;
@@ -16,15 +16,15 @@ public class User {
 	List<String> skills;
 	List<String> instrests;
 	List<String> links;
-	
+
 	List<String> teams; // groupId
 	List<String> subscriptions; // groupId
 	List<String> hackathons; // hackathonsId
-	
+
 	public User(String id, String fName, String lName, String username, String password, List<String> skills,
 			List<String> instrests, List<String> links, List<String> teams, List<String> subscriptions,
 			List<String> hackathons) {
-		
+
 		this.id = id;
 		this.fName = fName;
 		this.lName = lName;
@@ -125,5 +125,5 @@ public class User {
 	public void setHackathons(List<String> hackathons) {
 		this.hackathons = hackathons;
 	}
-	
+
 }
