@@ -1,12 +1,6 @@
 import React from 'react';
 
-// function User() {
-//   return (
-//     <div>
-//       User
-//     </div>
-//   );
-// }
+import UserDisplay from './UserDisplay';
 
 class User extends React.Component {
   constructor() {
@@ -22,19 +16,19 @@ class User extends React.Component {
 
     console.log(handle);
 
-    fetch('http://localhost:6969/user')
+    fetch('http://localhost:8080/api/User')
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
-        data.map(u => {
-          console.log(u.id);
-          console.log(handle);
-          if(u.id === handle) {
-            this.setState({
-              user: u
-            })
-          }
-        });
+        // data.map(u => {
+        //   console.log(u.id);
+        //   console.log(handle);
+        //   if(u.id === handle) {
+        //     this.setState({
+        //       user: u
+        //     })
+        //   }
+        // });
       });
   }
 
@@ -44,7 +38,7 @@ class User extends React.Component {
         {this.state.user==null ?
           <h1>Loading</h1>
           :
-          <h1>{this.state.user.fName + " " + this.state.user.lName}</h1>
+          <UserDisplay user={this.state.user} />
         }
       </div>
     )
