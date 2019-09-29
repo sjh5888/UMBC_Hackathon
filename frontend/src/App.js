@@ -3,7 +3,7 @@ import './assets/style.css';
 
 import Navigation from './nav/Navigation';
 import Routes from './nav/Routes';
-import GroupCard from './body/home/groupComponent/GroupCard';
+import GroupCard from './body/projects/ProjectCard';
 import Hackathon from './body/hackathon/Hackathon';
 
 
