@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import ViewProject from './ViewProject';
 
 class Group extends React.Component {
   constructor() {
@@ -34,10 +34,7 @@ class Group extends React.Component {
   render() {
     return (
       <div>
-        {this.state.group==null ?
-          <h1>Loading</h1>
-          :
-          <ProjectCard projectData={this.state.project} />
+        <ViewProject />
         }
       </div>
     )
