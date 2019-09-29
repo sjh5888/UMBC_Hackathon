@@ -3,7 +3,9 @@ package com.Hitch.backend.model;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document("Groups")
 public class Group{
 	
 	@Id
@@ -16,6 +18,7 @@ public class Group{
 	
 	List<String> team; // userId
 	List<String> subscriptions; // userId
+	
 	public Group(String groupId, String hackathonId, String projectId, String creator, List<String> team,
 			List<String> subscriptions) {
 		super();
@@ -63,6 +66,10 @@ public class Group{
 		this.subscriptions = subscriptions;
 	}
 	
+	public void addSub(String id)
+	{
+		subscriptions.add(id);
+	}
 	
 
 }

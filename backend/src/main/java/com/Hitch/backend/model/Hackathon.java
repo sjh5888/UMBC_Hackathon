@@ -4,8 +4,9 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-
+@Document("hackathon")
 public class Hackathon {
 
 	@Id
@@ -65,4 +66,10 @@ public class Hackathon {
 	public void setGroups(List<String> groups) {
 		this.groups = groups;
 	}
+	
+	public void addGroup(String id)
+	{
+		groups.add(id);
+	}
+	
 }

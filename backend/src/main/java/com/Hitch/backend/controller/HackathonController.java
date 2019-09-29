@@ -11,10 +11,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.Hitch.backend.model.Group;
 import com.Hitch.backend.model.Hackathon;
 import com.Hitch.backend.repository.RepositoryHackathon;
 
@@ -44,6 +46,16 @@ public class HackathonController implements RepositoryHackathon{
 		return repository.findById(id);
 	}
 
+	@PutMapping("/Hackathon/update/{id}")
+	public void addGroup(@PathVariable("id") String id,@RequestBody String groupId)
+	{
+		 Optional<Hackathon> hackathon = repository.findById(id);
+		 Hackathon temp = hackathon.get();
+		 
+		 temp.addGroup(groupId);
+		 repository.save(temp);
+	}
+	
 	@Override
 	public <S extends Hackathon> List<S> saveAll(Iterable<S> entities) {
 		// TODO Auto-generated method stub
