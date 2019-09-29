@@ -3,14 +3,13 @@ import {Card, Button} from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-class GroupCard extends React.Component{
-  constructor(){
-    super()
+class Project extends React.Component{
+  constructor(props){
+    super(props)
     this.handleClick = this.handleClick.bind(this)
 
     this.state = {
-      userId : "6ed61d4b80bb0f81937b32418e98adca",
-      isSubscribed: false
+      project : this.props.projectData
     }
   }
 
@@ -22,14 +21,14 @@ class GroupCard extends React.Component{
     console.log(" Subscribe clicked")
   }
 
-  render(props){
+  render(){
     return(
       <Card>
-        <Card.Header as="h5">{this.props.groupName}</Card.Header>
+        <Card.Header as="h5">{this.state.group.groupName}</Card.Header>
         <Card.Body>
-          <Card.Title>{this.props.projectName}</Card.Title>
+          <Card.Title>{this.state.group.projectName}</Card.Title>
             <Card.Text>
-              <p>{this.props.description}</p>
+              {this.state.group.description}
             </Card.Text>
             <Button onClick={this.handleClick}>
               Subscribe

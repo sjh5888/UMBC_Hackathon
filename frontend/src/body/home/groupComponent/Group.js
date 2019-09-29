@@ -1,12 +1,12 @@
 import React from 'react';
-import HackathonCard from './HackathonCard'
+import GroupCard from './GroupCard';
 
-class Hackathon extends React.Component {
+class Group extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      hackathon: null
+      project: null
     }
   }
 
@@ -15,17 +15,16 @@ class Hackathon extends React.Component {
 
     console.log(handle);
 
-    fetch('http://localhost:6969/hackathon')
+    fetch('http://localhost:6969/project')
       .then(resp => resp.json())
       .then(data => {
         console.log(data);
-        data.map(h => {
-          console.log(h.id);
+        data.map(p => {
+          console.log(p.id);
           console.log(handle);
-          if(h.id === handle) {
-           // console.log("hey")
+          if(p.id === handle) {
             this.setState({
-              hackathon: h
+              group: p
             })
           }
         });
@@ -35,14 +34,14 @@ class Hackathon extends React.Component {
   render() {
     return (
       <div>
-        {this.state.hackathon==null ?
+        {this.state.group==null ?
           <h1>Loading</h1>
           :
-          <HackathonCard hackathonData={this.state.hackathon} />
+          <GroupCard projectData={this.state.project} />
         }
       </div>
     )
   }
 }
 
-export default Hackathon;
+export default Group;
