@@ -45,10 +45,15 @@ public class GroupController implements RepositoryGroup{
 	}
 
 	@GetMapping("/Group/{id}")
-	public Optional<Group> GetSpecigicUser(@PathVariable("id") String id) {
+	public Optional<Group> GetSpecigicGroup(@PathVariable("id") String id) {
 		return repository.findById(id);
 	}
-
+	
+	@GetMapping("/group/{creator}")
+	public Optional<Group> GetGroupCreator(@PathVariable("creator") String creator) {
+		return repository.findById(creator);
+	}
+	
 	@PutMapping("/Group/update/{id}")
 	public void AddSubscriber(@PathVariable("id") String id,@RequestBody PutObject poj)
 	{
