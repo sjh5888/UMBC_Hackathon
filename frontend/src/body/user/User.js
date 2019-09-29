@@ -12,7 +12,8 @@ class User extends React.Component {
   }
 
   componentDidMount() {
-    const { handle } = this.props.match.params;
+    // const { handle } = this.props.match.params;
+    const handle = "6ed61d4b80bb0f81937b32418e98adca";
 
     console.log(handle);
 
